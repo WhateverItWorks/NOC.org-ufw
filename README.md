@@ -53,18 +53,3 @@ The script can run automatically by using cron;
 and add the event;
 
 ```0 0 * * 1 /your/path/noc.org-ufw/noc.org-ufw.sh > /dev/null 2>&1```
-
-**OR**
-
-If using node-red, simply add ```sudo /your/path/noc.org-ufw/./noc.org-ufw.sh``` to an 'exec node' and inject it every week.
-
-### Other UFW commands
-
-#### Delete a single rule
-Firstly get a numbered list of all rules  
-```sudo ufw status numbered```
-
-and then delete the rule by number  
-```sudo ufw delete 34```
-
-This concept was originally [developed by Leow Kah Man](https://www.leowkahman.com/2016/05/02/automate-raspberry-pi-ufw-allow-noc.org-inbound/).
