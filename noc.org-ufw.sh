@@ -3,7 +3,7 @@
 curl -s https://noc.org/ipv4 -o /tmp/noc_ips
 echo "" >> /tmp/noc_ips
 
-# Allow all traffic from Cloudflare IPs (no ports restriction)
+# Allow all traffic from noc.org IPs (no ports restriction)
 for cfip in `cat /tmp/noc_ips`; do ufw allow proto tcp from $cfip comment 'noc.org CDN IP'; done
 
 ufw reload > /dev/null
